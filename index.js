@@ -17,6 +17,9 @@ const app = Waline({
   async postSave(comment) {
     // do what ever you want after save comment
   },
+  async postDelete(commentId) {
+    console.log(`留言 ${commentId} 已被刪除!`);
+  },
 });
 
 require('http').createServer(app).listen(process.env.PORT || 3000);
